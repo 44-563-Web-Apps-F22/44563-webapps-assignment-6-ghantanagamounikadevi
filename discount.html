@@ -12,6 +12,7 @@
 
 </head>
 <body>
+
  <h2>computes discounts mounika</h2>
 
 <form>
@@ -47,8 +48,51 @@ function discount()
 }
 </script>
 
+<!-- part 6 -->
 
+<div class="container">
+    <form>
+        <div class="cal">
+        <input type="radio" id="firstop" name="operations" onclick="chooseOp()" value="times">
+        <label for="first"> * </label> 
+        </div><br>
+        <div class="cal">
+        <input type="radio" id="secondop" name="operations" onclick="chooseOp()" value="divide">
+        <label for="second"> / </label> 
+        </div><br>
+        <div class="cal">
+        <input type="radio" id="thirdop" name="operations" onclick="chooseOp()" value="exponent">
+        <label for="third"> ** </label>
+    </div><br>
+    </form>
 
+<p id="resultofOp"> Results will be displayed here </p>
 
+</div>    
+<script>
+function chooseOp()
+{
+   let baseval=document.getElementById("basevalue").value;
+   let discountval=document.getElementById("discountvalue").value;
+   let times=document.getElementById("firstop").checked;
+   let divide=document.getElementById("secondop").checked;
+   let exponent=document.getElementById("thirdop").checked;
+   let resultofOp=0;
+   if(times)
+   {
+    resultofOp=baseval * discountval
+   }
+   else if(divide)
+   {
+    resultofOp=baseval / discountval
+   }
+   else if(exponent)
+   {
+    resultofOp=baseval ** discountval
+   }
+   document.getElementById("resultofOp").innerHTML=resultofOp;
+
+}
+</script>
 </body>
-</html> 
+</html>
