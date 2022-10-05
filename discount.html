@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+  <title> Discount</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"   
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+ <h2>computes discounts mounika</h2>
+
+<form>
+    <div class="discount">
+        <label for="baseamount">Enter base amount</label>
+        <input type="number" id="basevalue" name="basevalue" value=20>
+    </div>
+    <br>
+    <div class="discount">
+        <label for="discountamount">Enter the discount percentage</label>
+        <input type="number" id="discountvalue" name="discountvalue" value=10>
+
+    </div>
+    <br>
+    <div> 
+        <input type="button" class="btn-btn-danger" onclick="discount()" value="Apply Discount">
+    </div>
+    <p id="result">Results will be displayed here</p>
+</form>
+
+<script>
+function discount()
+{
+    let base=document.getElementById("basevalue").value
+    let discountrate=document.getElementById("discountvalue").value
+    let result=""
+    for(let i=1;i<6;i++)
+    {
+        let discount=(base*i) - ((base*i)*discountrate/100)
+        result=result+" "+discount
+    }
+    document.getElementById("result").innerHTML="Discounted amounts for base "+base+" are "+result;
+}
+</script>
+
+
+
+
+</body>
+</html> 
