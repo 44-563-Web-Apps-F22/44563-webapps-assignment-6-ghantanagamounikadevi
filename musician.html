@@ -12,33 +12,49 @@
         <br>
         
         <form action="">
-            <label for="secret_value">Enter the secret musician name</label>
-            <input type="password" id="secret_value" name="secret_value" value="John Lennon">
+            <div class="row-mb-3">
+            <label class="col-sm-10" for="secret_value">Enter the secret musician name</label>
+            <div class="col-sm-5">
+            <input class="form-control" type="password" id="secret_value" name="secret_value" value="John Lennon">
+        </div>
+         </div>
+            <br>
+            <div class="row-mb-3">
+
+            <label class="col-sm-10" for="guess_musician">Guess the musician</label>
+            <div class="col-sm-10">
+            <input class="form-control" type="text" name="guess_musician" id="guess_musician" value="">
+           </div>
+           </div>
             <br>
 
-            <label for="guess_musician">Guess the musician</label>
-            <input type="text" name="guess_musician" id="guess_musician" value="">
-            <br>
 
-            <button type="button" onclick="checkGuess()" > Check the guess</button>
+            <button id="guessthegame" class="btn-primary" type="button" onclick="checkGuess()" > Check the guess</button>
             <div>
         
         </div>
         </form>
-        <p id="result">Results will be displayed here</p>
+        <p style="text-shadow: tomato;font-family: 'Times New Roman', Times, serif ;" id="result">Results will be displayed here</p>
 
-        
+        <!-- part 3 -->
         <script>
             // global variables
             var correct = 0
             var wrong = 0
+            var three_wrongs=0
 
             // function
             function checkGuess() {
                 secretvalue = document.getElementById("secret_value").value
                 guessvalue = document.getElementById("guess_musician").value
                 resultvalue = document.getElementById("guess_result")
-                if(secretvalue == guessvalue) {
+                if(three_wrongs>=3)
+                document.getElementById("guessthename").onclick=function gameOver()
+                {
+                    alert("Sorry, game over")
+                }
+            }
+                else if (secretvalue == guessvalue) {
                    alert("You got it right")
                     resultvalue.innerHTML = "Matched " + correct + "Unmatched " + wrong
                 } else {
@@ -46,7 +62,7 @@
                     resultvalue.innerHTML = "Matched " + correct + "Unmatched" + wrong
                 }
                   
-            }
+            
          
             </script>
         <br>
