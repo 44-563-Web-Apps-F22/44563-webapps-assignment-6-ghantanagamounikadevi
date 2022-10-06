@@ -12,20 +12,20 @@
 </head>
 <body>
 <!-- Part 7 -->
-<h2>Mounika selects a vacation </h2>
+<h2 style="text-decoration: wavy;color: steelblue;font-style: italic;"> Mounika selects a vacation </h2>
 <br>
 <div class="container">
     <form>
-       <div class="vacation">
+       <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: blue;"class="vacation">
         <input type="checkbox" id="byair" name="vacationtime" value="true">
         <label for="air">Travel by Air</label></div> <br>
-        <div class="vacation">
+        <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: blue;" class="vacation">
         <input type="checkbox" id="bydomestic" name="vacationtime" value="true">
         <label for="domestic">Domestic</label> </div><br>
-        <div class="vacation">
+        <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: blue;"class="vacation">
         <input type="checkbox" id="byresort" name="vacationtime" value="false">
         <label for="resort">Resort</label> </div><br>
-        <div class="vacation">
+        <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: blue;" class="vacation">
         <input type="button" class="btn-btn-warning" value="Select a vacation" onclick="selectVacation()">
     </div>
     </form>
@@ -67,7 +67,7 @@
     document.getElementById("result").innerHTML=JSON.stringify(my_vacation)
 }
     </script>
-     <form>
+     <form style="color:brown">
         <label for="city">Enter a city</label>
         <input type="text" id="city" name="propertyname" value="city"> <br>
         
@@ -76,7 +76,7 @@
         <br>
         <br>
     
-        <input type="button" class="btn-btn-success" value="Update the vacation" onclick="updateVacation()">
+        <input style="color:red" type="button" class="btn-btn-success" value="Update the vacation" onclick="updateVacation()">
         <br>
         <p id="resultofvacation"><br> Update the vacation </p>
         <br>

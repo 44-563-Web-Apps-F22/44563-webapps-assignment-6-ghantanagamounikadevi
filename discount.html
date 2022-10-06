@@ -13,24 +13,24 @@
 </head>
 <body>
 
- <h2>computes discounts mounika</h2>
+ <h2 style="text-align: center;color: blueviolet;">computes discounts mounika</h2>
 
 <form>
-    <div class="discount">
+    <div style="color: tomato;text-align: center;"class="discount">
         <label for="baseamount">Enter base amount</label>
         <input type="number" id="basevalue" name="basevalue" value=20>
     </div>
     <br>
-    <div class="discount">
+    <div style="color: tomato;text-align: center;"class="discount">
         <label for="discountamount">Enter the discount percentage</label>
         <input type="number" id="discountvalue" name="discountvalue" value=10>
 
     </div>
     <br>
-    <div> 
-        <input type="button" class="btn-btn-danger" onclick="discount()" value="Apply Discount">
+    <div style="text-align:center"> 
+        <input  type="button" class="btn-btn-danger" onclick="discount()" value="Apply Discount">
     </div>
-    <p id="result">Results will be displayed here</p>
+    <p style="text-decoration: underline;color: blue;text-align: center;"result">Results will be displayed here</p>
 </form>
 
 <script>
@@ -52,21 +52,21 @@ function discount()
 
 <div class="container">
     <form>
-        <div class="cal">
+        <div style="text-align:center" class="cal">
         <input type="radio" id="firstop" name="operations" onclick="chooseOp()" value="times">
         <label for="first"> * </label> 
         </div><br>
-        <div class="cal">
+        <div style="text-align:center" class="cal">
         <input type="radio" id="secondop" name="operations" onclick="chooseOp()" value="divide">
         <label for="second"> / </label> 
         </div><br>
-        <div class="cal">
+        <div style="text-align:center"class="cal">
         <input type="radio" id="thirdop" name="operations" onclick="chooseOp()" value="exponent">
         <label for="third"> ** </label>
     </div><br>
     </form>
 
-<p id="resultofOp"> Results will be displayed here </p>
+<p style="text-color: teal;text-align: center;"id="resultofOp"> Results will be displayed here </p>
 
 </div>    
 <script>
