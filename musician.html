@@ -49,11 +49,13 @@
                 guessvalue = document.getElementById("guess_musician").value
                 resultvalue = document.getElementById("guess_result")
                 if(three_wrongs>=3)
-                document.getElementById("guessthename").onclick=function gameOver()
+                {
+                    document.getElementById("guessthename").onclick=function gameOver()
                 {
                     alert("Sorry, game over")
                 }
-            }
+                
+                }
                 else if (secretvalue == guessvalue) {
                    alert("You got it right")
                     resultvalue.innerHTML = "Matched " + correct + "Unmatched " + wrong
